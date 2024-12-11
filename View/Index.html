@@ -1,0 +1,40 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Aluno</title>
+</head>
+<body>
+    <h1>Buscar Aluno</h1>
+    <label for="nome">Nome do Aluno:</label>
+    <input type="text" id="nome" placeholder="Digite o Nome do Aluno">
+    <button id="buscarAluno">Buscar Aluno</button>
+
+    <script>
+        document.getElementById('buscarAluno').addEventListener('click', function() 
+        {
+            const nome = document.getElementById('nome').value;
+
+            fetch('www.minha-REST-API.com.br/api/GetAllAlunos', {
+                method: 'POST',
+                headers: 
+                {
+                    'Content-Type': 'application/json'
+                },
+                body: null
+            })
+            .then(response => response.json())
+            .then(data => {
+
+                console.log(data); // Printa os dados do objeto recebido
+            
+            })
+            .catch(error => {
+                console.error('Erro ao buscar aluno:', error);
+            });
+        });
+    </script>
+</body>
+</html>
