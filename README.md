@@ -16,7 +16,7 @@ O que você foi informado foi o seguinte:
 ---
 
 ## Tarefas
-1. Ajustar o frontend para capturar o o input na tela e enviar para o endpoint correto via método HTTP GET.
+1. Ajustar o frontend para capturar o input na tela e enviar para o endpoint correto via método HTTP GET.
 
 2. Adaptar o backend para receber o parâmetro e retornar apenas o aluno correspondente.  
 
